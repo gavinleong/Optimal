@@ -1,6 +1,6 @@
 # Optimal - Wayfindr’s Public Transport Hackathon 2.0 https://www.wayfindr.net/
 
-Team Optimals solution to the Hackathon
+Team Optimal's solution to the Hackathon
 
 ## Getting Started
 
