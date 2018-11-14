@@ -1,0 +1,11 @@
+{  
+      "PathID":"1001TO1002",
+      "StationID":"9400ZZLUAMA",
+      "Source":1001,
+      "Target":1002,
+      "TravelTime":2,
+      "Beginning":null,
+      "Middle":null,
+      "Ending":"{10002,'Straight On', 10017,'Turn Right and keep right. Pass the table to your left', 10015, 'Turn Right and keep right. Pass the tables to your right.'}",
+      "StartingOnly":null
+   }
