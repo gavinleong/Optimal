@@ -28,11 +28,10 @@
 <body>
     
 
+   <%@include file="leftpanel.jsp" %>
     <!-- Right Panel -->
-
     <div id="right-panel" class="right-panel">
-
-        
+        <%@include file="header.jsp" %>
         <!-- Header-->
 
         <div class="breadcrumbs">
@@ -81,20 +80,7 @@
                         <!-- /# card -->
                     </div>
                     <!-- /# column -->
-                       <!-- /# row -->
-                    <div class="col-lg-12">
-                        <div class="card">
-                            <div class="card-header">
-                                <h4>Euston</h4>
-                            </div>
-                            <div class="card-body">
-                                <span class="updating-chart">5,3,9,6,5,9,7,3,5,2,5,3,9,6,5,9,7,3,5,2</span>
-                            </div>
-                        </div>
-                        <!-- /# card -->
-                    </div>
-                   
-
+               
 
 
 
