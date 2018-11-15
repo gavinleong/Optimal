@@ -1,78 +1,54 @@
-# Optimal - Wayfindr’s Public Transport Hackathon 2.0 https://www.wayfindr.net/
+# OptimALL - Wayfindr’s Public Transport Hackathon 2.0 https://www.wayfindr.net/
 
-Team Optimal's solution to the Hackathon
+OptimALL is a multisensor data fusion tool that uses currently available monitoring systems in the Underground to help TfL staff manage the Tube network. We combine data from multiple sensors in TfL Underground stations in a web application that staff can use to intuitively and remotely monitor how busy a station is, and make key decisions on station management. 
 
-## Getting Started
+The Problem
 
-These instructions will get you a copy of the project up and running on your local machine for development and testing purposes. See deployment for notes on how to deploy the project on a live system.
+Wayfindr mostly relies on beacons to communicate directions to its users. This system can be subject to multiple issues, such as low battery level, inaccuracies, signal failure, and even delivering the wrong instructions.
+This can result in incomplete journeys and users frustration; and with no back up system, this also adds extra responsibilities for TfL staff, who then have to take care of the matter themselves as soon as possible.
+
+The Solution
+
+In that context, OptimALL offers an analytical tool that uses other available monitoring systems - such as CCTV and fare gates - to provide additional information about users' journey. The extra source of data collected can feed into the Wayfindr app as an alternative way to keep track of users, and make sure they are on the right path. It can also provide meaningful information for TfL staff - i.e. congestion warnings, route optimisation, etc. - as well as improving key performance metrics - i.e. EJT (Estimated Journey Time) and LCH (Lost Customer Hours) - and reduce the need to intervene in case of a beacon failure.
+
+The Technology
+
+OptimALL can collect data from multiple existing sources from TfL. However for the sake of this hackathon, we will focus on data provided by CCTVs. We use facial recognition to keep track of users across the underground tunnels. These data can then be cross-checked against Wayfindr's insure the validity and accuracy of the navigation system. In addition, TfL can use those data to make informed decisions for the optimisation of customers’ journey.
 
 ### Prerequisites
 
-What things you need to install the software and how to install them
+To implement our facial recognition system, the following prerequisites must be installed.
 
-```
-Give examples
-```
+brew install cmake
+pip3 install dlib
+pip3 install opencv-python
+python3 image_recognition_script.py
 
-### Installing
+### CCTV Facial recognition
 
-A step by step series of examples that tell you how to get a development env running
+Facial recognition is implemented by modifying the OpenCV library and Dlib.
 
-Say what the step will be
+### Web application
 
-```
-Give the example
-```
+Our web application is built using Java EE, running within a GlassFish web server.
 
-And repeat
+Congestion Maps
+We demonstrate our method of optimal path selection through the network of walkways in a station. This is based on the aggregate data of multiple Wayfindr beacons, CCTV cameras, ticket barrier data and infrared sensors. 
 
-```
-until finished
-```
+Sensor Performance
+Each sensor type should be correlated with time, thus, if not, that indicates the presence of a fault with one or more sensors. This is a self-regulating system that provides reliable 
 
-End with an example of getting some data out of the system or using it for a little demo
-
-## Running the tests
-
-Explain how to run the automated tests for this system
-
-### Break down into end to end tests
-
-Explain what these tests test and why
-
-```
-Give an example
-```
-
-### And coding style tests
-
-Explain what these tests test and why
-
-```
-Give an example
-```
-
-## Deployment
-
-Add additional notes about how to deploy this on a live system
-
-## Built With
-
-* [Maven](https://maven.apache.org/) - Dependency Management
-
-## Contributing
-
-Please read [CONTRIBUTING.md](https://gist.github.com/PurpleBooth/b24679402957c63ec426) for details on our code of conduct, and the process for submitting pull requests to us.
-
-## Versioning
-
-We use [SemVer](http://semver.org/) for versioning. For the versions available, see the [tags on this repository](https://github.com/your/project/tags). 
+Station Analytics
+This tab shows the overall station performance. The aggregated data from all passengers is displayed as total footfall per hour, and average time spent in the station, both of which implies the business of the station.
 
 ## Authors
 
-* **Billie Thompson** - *Initial work* - [PurpleBooth](https://github.com/PurpleBooth)
-
-See also the list of [contributors](https://github.com/your/project/contributors) who participated in this project.
+* **Andrea**
+* **Douglas**
+* **Gavin**
+* **Matthew**
+* **Pierre-Antoine**
+* **Osman**
 
 ## License
 
@@ -80,7 +56,4 @@ This project is licensed under the MIT License - see the [LICENSE.md](LICENSE.md
 
 ## Acknowledgments
 
-* Hat tip to anyone whose code was used
-* Inspiration
-* etc
-
+Thanks Wayfindr's Public Transport Hackathon 2.0 for the event!
